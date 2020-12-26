@@ -1,7 +1,8 @@
-FROM alpine:3.11 as builder
+FROM alpine:3.11.7 as builder
 
-ENV JAMULUS_VERSION 3_6_2
+ARG JAMULUS_BUILD_VERSION=3_6_0 
 
+ENV JAMULUS_VERSION ${JAMULUS_BUILD_VERSION}
 RUN \
  echo "**** updating system packages ****" && \
  apk update
@@ -32,7 +33,7 @@ RUN \
    rm -rf /tmp/* && \
    apk del .build-dependencies
 
-FROM alpine:3.11
+FROM alpine:3.11.7
 
 RUN apk add --update --no-cache \
     qt5-qtbase-x11 icu-libs tzdata
