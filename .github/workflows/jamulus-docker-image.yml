@@ -1,4 +1,5 @@
 name: Jamulus Server - Docker Image CI
+environment: jamulus
 
 on:
   push:
