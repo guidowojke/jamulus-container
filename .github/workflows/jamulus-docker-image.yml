@@ -1,5 +1,4 @@
 name: Jamulus Server - Docker Image CI
-environment: jamulus
 
 on:
   push:
@@ -22,6 +21,7 @@ jobs:
   # Push image to GitHub Packages.
   # See also https://docs.docker.com/docker-hub/builds/
   push:
+    environment: jamulus
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
 
