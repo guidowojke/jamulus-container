@@ -1,5 +1,8 @@
 name: Jamulus Server - Docker Image CI
 
+# resource for multiarch builds
+#   https://github.com/marketplace/actions/build-and-push-docker-images
+
 on:
   push:
     # Publish `$default-branch` as Docker `latest` image.
@@ -39,6 +42,16 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./Dockerfile
+          platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
+          push: true
+          tags: |
+            taghor/jamulus:latest
 
       - name: Build image
         run: docker build . --file Dockerfile --tag $IMAGE_NAME
