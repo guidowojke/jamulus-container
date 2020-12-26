@@ -3,8 +3,9 @@ FROM alpine:3.11.7 as builder
 ARG JAMULUS_BUILD_VERSION=3_6_0 
 
 ENV JAMULUS_VERSION ${JAMULUS_BUILD_VERSION}
+
 RUN \
- echo "**** updating system packages ****" && \
+ echo "**** updating system packages (${JAMULUS_VERSION})****" && \
  apk update
 
 RUN \
