@@ -18,14 +18,14 @@ RUN \
 
 WORKDIR /tmp
 RUN \
- echo "**** getting source code ****" && \
-   wget "https://github.com/corrados/jamulus/archive/r${JAMULUS_VERSION}.tar.gz" && \
+ echo "**** getting source code (${JAMULUS_VERSON})****" && \
+   wget --no-verbose "https://github.com/corrados/jamulus/archive/r${JAMULUS_VERSION}.tar.gz" && \
    tar xzf r${JAMULUS_VERSION}.tar.gz
 
 # Github directory format for tar.gz export
 WORKDIR /tmp/jamulus-r${JAMULUS_VERSION}
 RUN \
- echo "**** compiling source code ****" && \
+ echo "**** compiling source code (${JAMULUS_VERSION}) ****" && \
    qmake "CONFIG+=nosound headless" Jamulus.pro && \
    make clean && \
    make && \
