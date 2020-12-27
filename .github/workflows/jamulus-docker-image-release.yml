@@ -85,7 +85,10 @@ jobs:
           release_name: Release ${{ github.ref }}
           body: |
             Changes in this Release
+            - added build.sh script
             - created github actions for container builds
             - create container images for many architectures
+            - added release documentation for gitflow on github
+            - added gitignore file
           draft: false
           prerelease: false
