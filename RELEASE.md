@@ -28,4 +28,5 @@ git branch -d release/${RELEASE_VERSION}
 * Quick Release
 ```
 mvn jgitflow:release-start jgitflow:release-finish
+git push --all
 ```
