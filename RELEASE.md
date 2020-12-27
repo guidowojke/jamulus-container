@@ -27,5 +27,5 @@ git branch -d release/${RELEASE_VERSION}
 ## automated release with jgitflow-maven-plugin
 * Quick Release
 ```
-mvn 
+mvn jgitflow:release-start jgitflow:release-finish
 ```
