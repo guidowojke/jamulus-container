@@ -1,4 +1,4 @@
-name: Jamulus Server - Docker Image CI
+name: Jamulus Server - Docker Image Release
 
 # resource for multiarch builds
 #   https://github.com/marketplace/actions/build-and-push-docker-images
@@ -60,8 +60,8 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          # platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
-          platforms: linux/arm/v6
+          platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
+          # platforms: linux/arm/v6
           push: true
           tags: ${{ steps.prep.outputs.tags }}
 
@@ -85,10 +85,6 @@ jobs:
           release_name: Release ${{ github.ref }}
           body: |
             Changes in this Release
-            - added build.sh script
-            - created github actions for container builds
-            - create container images for many architectures
-            - added release documentation for gitflow on github
-            - added gitignore file
+            - introduced maven release with gitflow-maven-plugin
           draft: false
           prerelease: false
