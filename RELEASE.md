@@ -1,7 +1,7 @@
 # How to release
 ## manual release with gitflow
 ```
-RELEASE_VERSION=3.6.0.0
+RELEASE_VERSION=3.6.0.1
 
 git checkout develop
 git pull
