@@ -85,10 +85,6 @@ jobs:
           release_name: Release ${{ github.ref }}
           body: |
             Changes in this Release
-            - added build.sh script
-            - created github actions for container builds
-            - create container images for many architectures
-            - added release documentation for gitflow on github
-            - added gitignore file
+            - introduced maven release with gitflow-maven-plugin
           draft: false
           prerelease: false
