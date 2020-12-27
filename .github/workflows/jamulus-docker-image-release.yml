@@ -1,4 +1,4 @@
-name: Jamulus Server - Docker Image CI
+name: Jamulus Server - Docker Image Release
 
 # resource for multiarch builds
 #   https://github.com/marketplace/actions/build-and-push-docker-images
