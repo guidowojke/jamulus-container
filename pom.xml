@@ -22,6 +22,9 @@
                     <keepBranch>false</keepBranch>
                     <enableSshAgent>true</enableSshAgent>
                     <noDeploy>true</noDeploy>
+                    <flowInitContext>
+                        <versionTagPrefix>v</versionTagPrefix>
+                    </flowInitContext>
                 </configuration>
             </plugin>
         </plugins>
