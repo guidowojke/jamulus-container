@@ -22,6 +22,7 @@
                     <pushReleases>false</pushReleases>
                     <keepBranch>false</keepBranch>
                     <enableSshAgent>true</enableSshAgent>
+                    <noDeploy>true</noDeploy>
                 </configuration>
             </plugin>
         </plugins>
