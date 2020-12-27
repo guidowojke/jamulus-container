@@ -1,5 +1,5 @@
 # How to release
-## create a release branch from develop
+## manual release with gitflow
 ```
 RELEASE_VERSION=3.6.0.0
 
@@ -16,3 +16,5 @@ git checkout develop
 git merge --no-ff release/${RELEASE_VERSION}
 git push
 ```
+## automated release with jgitflow-maven-plugin
+* TODO
