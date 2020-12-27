@@ -9,19 +9,13 @@ on:
     # Publish `$default-branch` as Docker `latest` image.
     branches:
       - develop
-
-    # Publish `v1.2.3` tags as releases.
-    tags:
-      - v*
-
-  # Run tests for any PRs.
-  pull_request:
+      - release/*
 
 env:
   # TODO: Change variable to your image's name.
   IMAGE_NAME: jamulus
   # Strip git ref prefix from version
-  VERSION: $(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+  VERSION2: $(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
 
 jobs:
   # Push image to GitHub Packages.
@@ -51,7 +45,8 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
+          # platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
+          platforms: linux/arm/v6
           push: true
           tags: |
             taghor/jamulus:latest
@@ -68,6 +63,9 @@ jobs:
 
           # Change all uppercase to lowercase
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
+
+          # Strip git ref prefix from version
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
 
           # Strip "v" prefix from tag name
           [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
