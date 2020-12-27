@@ -1,5 +1,10 @@
 # How to release
-## manual release with gitflow
+## GitFlow Documentation
+* https://nvie.com/posts/a-successful-git-branching-model/
+* https://jeffkreeftmeijer.com/git-flow/
+* https://bitbucket.org/atlassian/jgit-flow/wiki/Home
+
+### manual release with gitflow
 ```
 RELEASE_VERSION=3.6.0.1
 

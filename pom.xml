@@ -14,8 +14,29 @@
     </scm>
 
     <build>
+        <plugins>
+            <plugin>
+                <groupId>external.atlassian.jgitflow</groupId>
+                <artifactId>jgitflow-maven-plugin</artifactId>
+                <configuration>
+                    <pushReleases>false</pushReleases>
+                    <keepBranch>false</keepBranch>
+                    <enableSshAgent>true</enableSshAgent>
+                </configuration>
+            </plugin>
+        </plugins>
         <pluginManagement>
             <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.2.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>3.0.0-M1</version>
+                </plugin>
                 <plugin>
                     <groupId>external.atlassian.jgitflow</groupId>
                     <artifactId>jgitflow-maven-plugin</artifactId>
