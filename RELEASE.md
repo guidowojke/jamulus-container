@@ -29,4 +29,5 @@ git branch -d release/${RELEASE_VERSION}
 ```
 mvn jgitflow:release-start jgitflow:release-finish
 git push --all
+git push --tags
 ```
