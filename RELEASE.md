@@ -25,4 +25,7 @@ git push origin --delete release/${RELEASE_VERSION}
 git branch -d release/${RELEASE_VERSION}
 ```
 ## automated release with jgitflow-maven-plugin
-* TODO
+* Quick Release
+```
+mvn 
+```
