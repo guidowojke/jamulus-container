@@ -85,6 +85,6 @@ jobs:
           release_name: Release ${{ github.ref }}
           body: |
             Changes in this Release
-            - introduced maven release with gitflow-maven-plugin
+            - Updated to jamulus version 3.6.1
           draft: false
           prerelease: false
