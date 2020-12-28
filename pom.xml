@@ -18,7 +18,7 @@
                 <groupId>external.atlassian.jgitflow</groupId>
                 <artifactId>jgitflow-maven-plugin</artifactId>
                 <configuration>
-                    <pushReleases>false</pushReleases>
+                    <pushReleases>true</pushReleases>
                     <keepBranch>false</keepBranch>
                     <enableSshAgent>true</enableSshAgent>
                     <noDeploy>true</noDeploy>
