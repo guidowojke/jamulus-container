@@ -16,7 +16,7 @@ docker run \
   -d --rm \
   -p 22124:22124/udp \
   -v $(pwd)/jam:/jam \
-  grundic/jamulus \
+  guidowojke/jamulus \
   -n -s -p 22124 -l /jam/jamulus.log -w "Welcome to Jamulus docker server."
 ```
 
@@ -28,7 +28,7 @@ version: "3.7"
 services:
   jamulus:
     container_name: jamulus 
-    image: grundic/jamulus
+    image: guidowojke/jamulus:3.6.2.0
     restart: always
     ports:
       - "22124:22124/udp"
