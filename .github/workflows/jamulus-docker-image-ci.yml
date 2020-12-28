@@ -60,11 +60,10 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          # platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
-          platforms: linux/arm/v6
+          platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
+          # platforms: linux/arm/v6
           push: true
-          tags: |
-            taghor/jamulus:latest
+          tags: ${{ steps.prep.outputs.tags }}
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
