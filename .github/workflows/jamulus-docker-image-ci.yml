@@ -9,7 +9,6 @@ on:
     # Publish `$default-branch` as Docker `latest` image.
     branches:
       - develop
-      - release/*
 
 env:
   IMAGE_NAME: jamulus

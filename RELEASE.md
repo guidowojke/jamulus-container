@@ -6,7 +6,7 @@
 
 ### manual release with gitflow
 ```
-RELEASE_VERSION=3.6.0.1
+RELEASE_VERSION=3.6.1.0
 
 git checkout develop
 git pull
@@ -24,11 +24,13 @@ git push
 git push origin --delete release/${RELEASE_VERSION}
 git branch -d release/${RELEASE_VERSION}
 ```
-## automated release with jgitflow-maven-plugin
-* Quick Release
+## automated release with jgitflow-maven-plugin (Quick Release)
 ```
 git pull --all
 mvn --batch-mode jgitflow:release-start jgitflow:release-finish
 git push --all
 git push --tags
 ```
+
+## view git network on the command line
+* `git log --pretty=oneline --graph --decorate --all`

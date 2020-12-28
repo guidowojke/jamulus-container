@@ -3,7 +3,7 @@
 
     <groupId>de.guidowojke.jamulus</groupId>
     <artifactId>jamulus-docker</artifactId>
-    <version>3.6.0.2</version>
+    <version>3.6.1.0</version>
 
     <scm>
         <url>https://github.com/guidowojke/jamulus-docker</url>
@@ -18,7 +18,7 @@
                 <groupId>external.atlassian.jgitflow</groupId>
                 <artifactId>jgitflow-maven-plugin</artifactId>
                 <configuration>
-                    <pushReleases>false</pushReleases>
+                    <pushReleases>true</pushReleases>
                     <keepBranch>false</keepBranch>
                     <enableSshAgent>true</enableSshAgent>
                     <noDeploy>true</noDeploy>
