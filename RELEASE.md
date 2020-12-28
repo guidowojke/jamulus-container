@@ -6,7 +6,7 @@
 
 ### manual release with gitflow
 ```
-RELEASE_VERSION=3.6.1.0
+RELEASE_VERSION=3.6.2.0
 
 git checkout develop
 git pull
@@ -28,8 +28,6 @@ git branch -d release/${RELEASE_VERSION}
 ```
 git pull --all
 mvn --batch-mode jgitflow:release-start jgitflow:release-finish
-git push --all
-git push --tags
 ```
 
 ## view git network on the command line

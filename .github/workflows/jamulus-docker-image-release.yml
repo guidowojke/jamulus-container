@@ -85,6 +85,6 @@ jobs:
           release_name: Release ${{ github.ref }}
           body: |
             Changes in this Release
-            - Updated to jamulus version 3.6.1
+            - Updated to jamulus version 3.6.2
           draft: false
           prerelease: false

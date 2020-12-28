@@ -1,5 +1,5 @@
 # Jamulus 🎶
-[Docker](https://hub.docker.com/repository/docker/grundic/jamulus) configuration for [Jamulus](https://github.com/corrados/jamulus) music server.
+[Docker](https://hub.docker.com/repository/docker/taghor/jamulus) configuration for [Jamulus](https://github.com/corrados/jamulus) music server.
 
 The Jamulus software enables musicians to perform real-time jam sessions over the internet. There is one server running the Jamulus server software which collects the audio data from each Jamulus client, mixes the audio data and sends the mix back to each client.
 
@@ -16,7 +16,7 @@ docker run \
   -d --rm \
   -p 22124:22124/udp \
   -v $(pwd)/jam:/jam \
-  grundic/jamulus \
+  guidowojke/jamulus \
   -n -s -p 22124 -l /jam/jamulus.log -w "Welcome to Jamulus docker server."
 ```
 
@@ -28,7 +28,7 @@ version: "3.7"
 services:
   jamulus:
     container_name: jamulus 
-    image: grundic/jamulus
+    image: guidowojke/jamulus:3.6.2.0
     restart: always
     ports:
       - "22124:22124/udp"
