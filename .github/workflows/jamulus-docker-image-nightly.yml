@@ -1,13 +1,12 @@
-name: Jamulus Server - Docker Image CI
+name: Jamulus Server - Docker Image nightly
 
 # resource for multiarch builds
 #   https://github.com/marketplace/actions/build-and-push-docker-images
 #   https://github.com/metcalfc/docker-action-examples/blob/main/.github/workflows/release.yml
 
 on:
-  push:
-    branches:
-      - develop
+  schedule:
+    - cron: '0 2 * * *' # run at 2 AM UTC
 
 env:
   IMAGE_NAME: jamulus
