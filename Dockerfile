@@ -1,4 +1,4 @@
-FROM alpine:3.12.3 as builder
+FROM alpine:3.13.1 as builder
 
 ARG JAMULUS_BUILD_VERSION=3_6_2
 
@@ -20,7 +20,7 @@ RUN \
 WORKDIR /tmp
 RUN \
  echo "**** getting source code (${JAMULUS_VERSON})****" && \
-   wget --no-verbose "https://github.com/corrados/jamulus/archive/r${JAMULUS_VERSION}.tar.gz" && \
+   wget --no-verbose "https://github.com/jamulussoftware/jamulus/archive/r${JAMULUS_VERSION}.tar.gz" && \
    tar xzf r${JAMULUS_VERSION}.tar.gz
 
 # Github directory format for tar.gz export
