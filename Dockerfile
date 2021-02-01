@@ -34,7 +34,7 @@ RUN \
    rm -rf /tmp/* && \
    apk del .build-dependencies
 
-FROM alpine:3.12.3
+FROM alpine:3.13.1
 
 RUN apk add --update --no-cache \
     qt5-qtbase-x11 icu-libs tzdata
